@@ -1,0 +1,314 @@
+/* =========================
+   STUDENT PROFILE
+   ========================= */
+
+.student-profile-page {
+  min-height: 100vh;
+  background: #0b0b0d;
+  color: #f5f5f5;
+}
+
+
+/* HEADER */
+
+.student-profile-header {
+  height: 72px;
+
+  background: #111113;
+  border-bottom: 1px solid #303035;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+}
+
+.student-profile-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.student-profile-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.student-profile-back {
+  background: transparent;
+
+  border: 1px solid #3a3a40;
+  border-radius: 3px;
+
+  color: #c8c8cc;
+
+  padding: 8px 15px;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.student-profile-back:hover {
+  border-color: #7a00a8;
+  color: #ffffff;
+}
+
+
+/* CONTENT */
+
+.student-profile-content {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 50px 30px 70px;
+}
+
+
+/* CARD */
+
+.student-profile-card {
+  background: #17171a;
+
+  border: 1px solid #303035;
+}
+
+
+/* PROFILE TOP */
+
+.student-profile-top {
+  padding: 35px 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  border-bottom: 1px solid #303035;
+}
+
+.student-avatar {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: #7a00a8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.student-profile-top h1 {
+  margin: 0 0 7px;
+
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.student-profile-top p {
+  margin: 0;
+
+  color: #85858d;
+
+  font-size: 14px;
+}
+
+
+/* DETAILS */
+
+.profile-details-section {
+  padding: 32px 40px;
+
+  border-bottom: 1px solid #303035;
+}
+
+.profile-details-section h2,
+.profile-achievement-section h2 {
+  margin: 0 0 24px;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.profile-details-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1px;
+
+  background: #303035;
+
+  border: 1px solid #303035;
+}
+
+.profile-detail {
+  min-height: 78px;
+
+  padding: 17px 18px;
+
+  background: #17171a;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 7px;
+}
+
+.profile-detail span {
+  color: #77777f;
+
+  font-size: 12px;
+}
+
+.profile-detail strong {
+  color: #dedee2;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* ACHIEVEMENT SUMMARY */
+
+.profile-achievement-section {
+  padding: 32px 40px;
+
+  border-bottom: 1px solid #303035;
+}
+
+.profile-achievement-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border: 1px solid #303035;
+}
+
+.profile-achievement-stats div {
+  min-height: 90px;
+
+  padding: 18px;
+
+  background: #141416;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border-right: 1px solid #303035;
+}
+
+.profile-achievement-stats div:last-child {
+  border-right: none;
+}
+
+.profile-achievement-stats strong {
+  font-size: 24px;
+  font-weight: 600;
+
+  color: #f5f5f5;
+}
+
+.profile-achievement-stats span {
+  color: #77777f;
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+
+/* ACTION */
+
+.student-profile-actions {
+  padding: 25px 40px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.student-profile-back-bottom {
+  height: 42px;
+
+  padding: 0 20px;
+
+  background: transparent;
+
+  border: 1px solid #3a3a40;
+  border-radius: 3px;
+
+  color: #c8c8cc;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.student-profile-back-bottom:hover {
+  border-color: #7a00a8;
+  color: #ffffff;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+
+  .student-profile-header {
+    padding: 0 20px;
+  }
+
+  .student-profile-content {
+    padding: 30px 15px 50px;
+  }
+
+  .student-profile-top {
+    padding: 28px 22px;
+  }
+
+  .profile-details-section,
+  .profile-achievement-section {
+    padding: 28px 22px;
+  }
+
+  .profile-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-achievement-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-achievement-stats div {
+    border-right: none;
+    border-bottom: 1px solid #303035;
+  }
+
+  .student-profile-actions {
+    padding: 22px;
+  }
+
+}

@@ -1,0 +1,353 @@
+/* =========================
+   ADD ACHIEVEMENT PAGE
+   ========================= */
+
+.achievement-page {
+  min-height: 100vh;
+  background: #0b0b0d;
+  color: #f5f5f5;
+}
+
+
+/* HEADER */
+
+.achievement-header {
+  height: 72px;
+
+  background: #111113;
+  border-bottom: 1px solid #303035;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+}
+
+.achievement-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.achievement-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+  background: transparent;
+
+  border: 1px solid #3a3a40;
+  border-radius: 3px;
+
+  color: #c8c8cc;
+
+  padding: 8px 15px;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  border-color: #7a00a8;
+  color: #ffffff;
+}
+
+
+/* CONTENT */
+
+.achievement-content {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 50px 30px 70px;
+}
+
+
+/* FORM CARD */
+
+.achievement-form-card {
+  background: #17171a;
+
+  border: 1px solid #303035;
+
+  padding: 38px 42px;
+}
+
+
+/* HEADING */
+
+.form-heading {
+  margin-bottom: 35px;
+}
+
+.form-heading h1 {
+  margin: 0 0 8px;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  color: #f5f5f5;
+}
+
+.form-heading p {
+  margin: 0;
+
+  color: #85858d;
+
+  font-size: 14px;
+}
+
+
+/* FORM SECTION */
+
+.form-section {
+  padding: 28px 0;
+
+  border-top: 1px solid #303035;
+}
+
+.form-section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.form-section h2 {
+  margin: 0 0 22px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  color: #e8e8ea;
+}
+
+
+/* FORM GRID */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+
+/* FIELD */
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #d0d0d5;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+
+  background: #202024;
+
+  border: 1px solid #3a3a40;
+  border-radius: 3px;
+
+  color: #f5f5f5;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+}
+
+.form-field input,
+.form-field select {
+  height: 46px;
+
+  padding: 0 14px;
+}
+
+.form-field textarea {
+  padding: 12px 14px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #707078;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #7a00a8;
+}
+
+
+/* SELECT */
+
+.form-field select {
+  cursor: pointer;
+}
+
+.form-field select option {
+  background: #202024;
+  color: #ffffff;
+}
+
+
+/* FILE UPLOAD */
+
+.upload-box {
+  border: 1px dashed #45454b;
+
+  background: #141416;
+
+  padding: 28px;
+
+  text-align: center;
+}
+
+.upload-box input {
+  color: #cfcfd3;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  margin-bottom: 12px;
+}
+
+.upload-box p {
+  margin: 5px 0;
+
+  color: #bdbdc2;
+
+  font-size: 13px;
+}
+
+.upload-box span {
+  color: #68686f;
+
+  font-size: 12px;
+}
+
+
+/* ACTIONS */
+
+.form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #303035;
+}
+
+.cancel-button {
+  height: 44px;
+
+  padding: 0 20px;
+
+  background: transparent;
+
+  border: 1px solid #3a3a40;
+  border-radius: 3px;
+
+  color: #c7c7cc;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  border-color: #55555c;
+  color: #ffffff;
+}
+
+.submit-achievement-button {
+  height: 44px;
+
+  padding: 0 22px;
+
+  background: #7a00a8;
+
+  border: none;
+  border-radius: 3px;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.submit-achievement-button:hover {
+  background: #9200c4;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .achievement-header {
+    padding: 0 20px;
+  }
+
+  .achievement-content {
+    padding: 30px 15px 50px;
+  }
+
+  .achievement-form-card {
+    padding: 28px 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-button,
+  .submit-achievement-button {
+    width: 100%;
+  }
+}

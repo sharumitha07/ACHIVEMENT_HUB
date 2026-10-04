@@ -1,0 +1,297 @@
+/* =========================
+   HOME / SHOWCASE
+   ========================= */
+
+.home-page {
+  min-height: 100vh;
+  background: #0b0b0d;
+  color: #f5f5f5;
+}
+
+
+/* HEADER */
+
+.home-header {
+  height: 72px;
+
+  background: #111113;
+  border-bottom: 1px solid #303035;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+}
+
+.home-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.home-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+
+/* NAVIGATION */
+
+.home-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-nav button {
+  background: transparent;
+
+  border: none;
+
+  color: #85858d;
+
+  padding: 9px 12px;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.home-nav button:hover {
+  color: #ffffff;
+}
+
+
+/* CONTENT */
+
+.home-content {
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 55px 40px 80px;
+}
+
+
+/* INTRO */
+
+.home-intro {
+  padding-bottom: 50px;
+
+  border-bottom: 1px solid #303035;
+}
+
+.home-label {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: #9a00d0;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 1.2px;
+}
+
+.home-intro h1 {
+  margin: 0 0 18px;
+
+  font-size: clamp(38px, 5vw, 58px);
+
+  line-height: 1.05;
+
+  font-weight: 600;
+
+  letter-spacing: -1.5px;
+}
+
+.home-intro p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #85858d;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* SHOWCASE */
+
+.showcase-section {
+  padding-top: 45px;
+}
+
+.showcase-heading {
+  margin-bottom: 25px;
+}
+
+.showcase-heading h2 {
+  margin: 0 0 7px;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+.showcase-heading p {
+  margin: 0;
+
+  color: #77777f;
+
+  font-size: 13px;
+}
+
+
+/* GRID */
+
+.achievement-showcase-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+
+/* CARD */
+
+.showcase-card {
+  min-height: 220px;
+
+  background: #17171a;
+
+  border: 1px solid #303035;
+
+  transition: border-color 0.2s ease;
+}
+
+.showcase-card:hover {
+  border-color: #55555c;
+}
+
+
+/* POSITION */
+
+.position-badge {
+  display: inline-block;
+
+  margin: 20px 20px 0;
+
+  padding: 6px 10px;
+
+  border: 1px solid #3d3d43;
+
+  color: #cfcfd4;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+}
+
+.position-badge.first {
+  border-color: #75621f;
+  color: #d5bd62;
+}
+
+.position-badge.second {
+  border-color: #5b5b60;
+  color: #bfc0c5;
+}
+
+.position-badge.third {
+  border-color: #65472d;
+  color: #c59a73;
+}
+
+.position-badge.special {
+  border-color: #7a00a8;
+  color: #b900e8;
+}
+
+
+/* CARD CONTENT */
+
+.showcase-card-content {
+  padding: 22px 20px 25px;
+}
+
+.showcase-card-content h3 {
+  margin: 0 0 6px;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  color: #f1f1f3;
+}
+
+.student-department {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: #77777f;
+
+  font-size: 12px;
+}
+
+.achievement-info {
+  padding-top: 15px;
+
+  border-top: 1px solid #303035;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.achievement-info strong {
+  color: #dcdce0;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+.achievement-info span {
+  color: #77777f;
+
+  font-size: 12px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .home-header {
+    padding: 0 20px;
+  }
+
+  .home-nav {
+    display: none;
+  }
+
+  .home-content {
+    padding: 40px 20px 60px;
+  }
+
+  .achievement-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

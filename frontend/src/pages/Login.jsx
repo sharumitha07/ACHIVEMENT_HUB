@@ -1,5 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import '../styles/login.css';
+
 function Login() {
+  const navigate = useNavigate();
+
   return (
     <div className="login-page">
       <div className="login-overlay">
@@ -27,7 +31,10 @@ function Login() {
             of Rajalakshmi Engineering College students.
           </p>
 
-          <button className="login-button">
+          <button
+            className="login-button"
+            onClick={() => navigate('/student/profile-setup')}
+          >
             Sign in with your REC mail
           </button>
 
