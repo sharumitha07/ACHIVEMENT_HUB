@@ -1,11 +1,15 @@
 import { useNavigate } from 'react-router-dom';
+import campusBg from '../assets/campus-bg.jpg';
 import '../styles/login.css';
 
 function Login() {
   const navigate = useNavigate();
 
   return (
-    <div className="login-page">
+    <div
+      className="login-page"
+      style={{ backgroundImage: `url(${campusBg})` }}
+    >
       <div className="login-overlay">
 
         <div className="login-card">

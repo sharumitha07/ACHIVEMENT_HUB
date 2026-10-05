@@ -1,0 +1,408 @@
+/* =========================================
+   ACHIEVEMENT HUB - COLLAPSIBLE SIDEBAR
+========================================= */
+
+.app-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 64px;
+  height: 100vh;
+
+  background: #090c1a;
+  border-right: 1px solid #20263a;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  z-index: 1000;
+
+  transition: width 0.25s ease;
+}
+
+
+/* =========================================
+   EXPAND SIDEBAR ON HOVER
+========================================= */
+
+.app-sidebar:hover {
+  width: 250px;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.sidebar-brand {
+  min-width: 250px;
+  height: 86px;
+
+  padding: 18px 11px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  border-bottom: 1px solid #1c2234;
+}
+
+.sidebar-logo {
+  width: 42px;
+  height: 42px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.sidebar-brand-text {
+  opacity: 0;
+
+  min-width: 0;
+
+  transition: opacity 0.15s ease;
+}
+
+.app-sidebar:hover .sidebar-brand-text {
+  opacity: 1;
+}
+
+.sidebar-brand-text h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  white-space: nowrap;
+}
+
+.sidebar-brand-text span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #6f7892;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 0.3px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.sidebar-menu {
+  padding: 25px 10px 10px;
+}
+
+.sidebar-menu-title {
+  height: 14px;
+
+  margin: 0 0 12px 12px;
+
+  color: #59627b;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  transition: opacity 0.15s ease;
+}
+
+.app-sidebar:hover .sidebar-menu-title {
+  opacity: 1;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.sidebar-link {
+  position: relative;
+
+  width: 100%;
+  min-width: 230px;
+  height: 42px;
+
+  margin-bottom: 5px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  border-radius: 8px;
+
+  color: #8d97b1;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* Hover */
+
+.sidebar-link:hover {
+  background: #12172a;
+
+  color: #e4e7f0;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================
+   ACTIVE LINK
+========================================= */
+
+.sidebar-link.active {
+  background: linear-gradient(
+    90deg,
+    #26134f,
+    #1d123d
+  );
+
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+.sidebar-link.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 7px;
+
+  width: 3px;
+  height: 28px;
+
+  background: #c044ff;
+
+  border-radius: 0 4px 4px 0;
+}
+
+
+/* =========================================
+   NAVIGATION TEXT
+========================================= */
+
+.sidebar-link > span:last-child {
+  opacity: 0;
+
+  transition: opacity 0.15s ease;
+}
+
+.app-sidebar:hover .sidebar-link > span:last-child {
+  opacity: 1;
+}
+
+
+/* =========================================
+   ICONS
+========================================= */
+
+.sidebar-icon {
+  width: 20px;
+  min-width: 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #7c87a4;
+
+  font-size: 17px;
+
+  line-height: 1;
+
+  flex-shrink: 0;
+
+  transition: color 0.2s ease;
+}
+
+.sidebar-link:hover .sidebar-icon {
+  color: #b9a0ff;
+}
+
+.sidebar-link.active .sidebar-icon {
+  color: #c084fc;
+}
+
+
+/* =========================================
+   BOTTOM SECTION
+========================================= */
+
+.sidebar-bottom {
+  margin-top: auto;
+
+  min-width: 250px;
+
+  padding: 14px 10px 18px;
+
+  border-top: 1px solid #1c2234;
+}
+
+
+/* =========================================
+   BOTTOM BUTTONS
+========================================= */
+
+.sidebar-bottom-link {
+  width: 100%;
+  min-width: 230px;
+  height: 42px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 8px;
+
+  color: #7f89a4;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-align: left;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* Bottom hover */
+
+.sidebar-bottom-link:hover {
+  background: #12172a;
+
+  color: #e4e7f0;
+}
+
+.sidebar-bottom-link:hover .sidebar-icon {
+  color: #b9a0ff;
+}
+
+
+/* Bottom text */
+
+.sidebar-bottom-link > span:last-child {
+  opacity: 0;
+
+  transition: opacity 0.15s ease;
+}
+
+.app-sidebar:hover .sidebar-bottom-link > span:last-child {
+  opacity: 1;
+}
+
+
+/* =========================================
+   STUDENT LAYOUT
+========================================= */
+
+.student-layout {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #080b18;
+
+  position: relative;
+}
+
+.student-layout-content {
+  min-height: 100vh;
+
+  margin-left: 64px;
+
+  width: calc(100% - 64px);
+
+  transition:
+    margin-left 0.25s ease,
+    width 0.25s ease;
+}
+
+.app-sidebar:hover ~ .student-layout-content {
+  margin-left: 250px;
+
+  width: calc(100% - 250px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .app-sidebar {
+    width: 64px;
+  }
+
+  .app-sidebar:hover {
+    width: 235px;
+  }
+
+  .student-layout-content {
+    margin-left: 64px;
+
+    width: calc(100% - 64px);
+  }
+
+  .app-sidebar:hover ~ .student-layout-content {
+    margin-left: 235px;
+
+    width: calc(100% - 235px);
+  }
+}

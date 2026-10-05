@@ -1,16 +1,28 @@
 .login-page {
   min-height: 100vh;
   width: 100%;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
-    #171717;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
 }
 
+/* Dark overlay over the campus image */
+.login-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+/* Keeps the login card above the background overlay */
 .login-overlay {
+  position: relative;
+  z-index: 1;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -19,18 +31,26 @@
   padding: 30px;
 }
 
+/* Login Card */
+
 .login-card {
   width: min(830px, 90%);
   min-height: 500px;
   padding: 48px 60px;
+
   border: 2px solid #8a00b8;
+
   background: rgba(10, 10, 10, 0.78);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   text-align: center;
 }
+
+/* REC Logo */
 
 .login-logo {
   width: 190px;
@@ -39,44 +59,66 @@
   margin-bottom: 22px;
 }
 
+/* Achievement Hub Label */
+
 .login-label {
   background: #570078;
   color: #ffffff;
+
   padding: 8px 20px;
   border-radius: 4px;
+
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.3px;
+
   margin-bottom: 26px;
 }
 
+/* Main Heading */
+
 .login-card h1 {
   color: #ffffff;
+
   font-size: clamp(38px, 5vw, 58px);
   line-height: 1.05;
   font-weight: 700;
   letter-spacing: -1.5px;
+
   margin: 0 0 25px;
 }
 
+/* Description */
+
 .login-card p {
   color: #c8c8c8;
+
   font-size: 20px;
   line-height: 1.5;
+
   max-width: 650px;
+
   margin: 0 0 30px;
 }
 
+/* Login Button */
+
 .login-button {
   border: none;
+
   background: #9500d0;
   color: #ffffff;
+
   padding: 16px 34px;
   min-width: 310px;
+
   border-radius: 4px;
+
   font-size: 18px;
   font-weight: 600;
+
   cursor: pointer;
+
   transition: 0.2s ease;
 }
 
@@ -92,6 +134,7 @@
 /* Mobile */
 
 @media (max-width: 600px) {
+
   .login-overlay {
     padding: 20px;
   }
