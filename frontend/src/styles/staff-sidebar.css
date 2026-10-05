@@ -1,0 +1,290 @@
+/* ================================
+   STAFF SIDEBAR
+================================ */
+
+.staff-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 64px;
+  height: 100vh;
+  background: #090c1a;
+  border-right: 1px solid #20263a;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+  z-index: 1000;
+
+  transition: width 0.25s ease;
+}
+
+/* Expand on hover */
+.staff-sidebar:hover {
+  width: 250px;
+}
+
+/* ================================
+   BRAND
+================================ */
+
+.staff-sidebar-brand {
+  height: 88px;
+  display: flex;
+  align-items: center;
+
+  padding: 0 17px;
+
+  border-bottom: 1px solid #20263a;
+
+  flex-shrink: 0;
+}
+
+.staff-sidebar-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.staff-sidebar-brand-text {
+  margin-left: 15px;
+  white-space: nowrap;
+
+  opacity: 0;
+  transform: translateX(-8px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.staff-sidebar:hover .staff-sidebar-brand-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.staff-sidebar-brand-text h2 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.staff-sidebar-brand-text span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #687188;
+  font-size: 7px;
+  letter-spacing: 0.4px;
+}
+
+/* ================================
+   MENU
+================================ */
+
+.staff-sidebar-menu {
+  flex: 1;
+  padding: 24px 9px;
+}
+
+.staff-sidebar-menu-title {
+  margin: 0 0 12px 12px;
+
+  color: #515b72;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  white-space: nowrap;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.staff-sidebar:hover .staff-sidebar-menu-title {
+  opacity: 1;
+}
+
+/* ================================
+   NAVIGATION LINKS
+================================ */
+
+.staff-sidebar-link {
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 5px;
+  padding: 0 12px;
+
+  border-radius: 8px;
+
+  color: #7d869c;
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.staff-sidebar-link:hover {
+  background: #11172a;
+  color: #ffffff;
+}
+
+.staff-sidebar-link.active {
+  background: #17132d;
+  color: #a98aff;
+}
+
+.staff-sidebar-icon {
+  width: 28px;
+  min-width: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+  line-height: 1;
+}
+
+.staff-sidebar-link > span:last-child {
+  margin-left: 10px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.staff-sidebar:hover .staff-sidebar-link > span:last-child {
+  opacity: 1;
+}
+
+/* ================================
+   BOTTOM
+================================ */
+
+.staff-sidebar-bottom {
+  padding: 12px 9px 18px;
+
+  border-top: 1px solid #20263a;
+}
+
+.staff-sidebar-bottom-link {
+  width: 100%;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #737d94;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.staff-sidebar-bottom-link:hover {
+  background: #11172a;
+  color: #ffffff;
+}
+
+.staff-sidebar-bottom-link > span:last-child {
+  margin-left: 10px;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+.staff-sidebar:hover .staff-sidebar-bottom-link > span:last-child {
+  opacity: 1;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+  .staff-sidebar {
+    width: 64px;
+  }
+
+  .staff-sidebar:hover {
+    width: 235px;
+  }
+}
+/* =================================
+   STAFF PAGE CONTENT POSITION
+================================= */
+
+.staff-layout {
+  min-height: 100vh;
+  width: 100%;
+  background: #080b18;
+}
+
+.staff-layout-content {
+  min-height: 100vh;
+
+  margin-left: 64px;
+  width: calc(100% - 64px);
+
+  transition:
+    margin-left 0.25s ease,
+    width 0.25s ease;
+}
+
+/* Move content when sidebar expands */
+
+.staff-sidebar:hover ~ .staff-layout-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+  .staff-layout-content {
+    margin-left: 64px;
+    width: calc(100% - 64px);
+  }
+
+  .staff-sidebar:hover ~ .staff-layout-content {
+    margin-left: 235px;
+    width: calc(100% - 235px);
+  }
+
+}

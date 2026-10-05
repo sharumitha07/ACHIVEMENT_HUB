@@ -1,0 +1,378 @@
+/* ================================
+   STAFF STUDENTS PAGE
+================================ */
+
+.staff-students-page {
+  min-height: 100vh;
+  background: #080b18;
+  color: #ffffff;
+  padding: 0 34px 40px;
+}
+
+/* ================================
+   TOP BAR
+================================ */
+
+.staff-students-topbar {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #20263a;
+}
+
+.staff-students-topbar h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+}
+
+.staff-students-topbar p {
+  margin: 5px 0 0;
+  color: #7f879d;
+  font-size: 13px;
+}
+
+/* User */
+
+.staff-students-user {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.staff-user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #7048ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.staff-students-user div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.staff-students-user strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.staff-students-user small {
+  color: #7f879d;
+  font-size: 11px;
+}
+
+.staff-students-user button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border: 1px solid #30374e;
+  border-radius: 7px;
+  background: transparent;
+  color: #cbd0df;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.staff-students-user button:hover {
+  border-color: #7048ff;
+  color: #ffffff;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+.staff-students-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-top: 28px;
+}
+
+/* ================================
+   SUMMARY
+================================ */
+
+.students-summary {
+  background: #0d1222;
+  border: 1px solid #20263a;
+  border-radius: 12px;
+  padding: 25px 28px;
+  margin-bottom: 20px;
+}
+
+.students-summary span {
+  color: #8f73ff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.students-summary h2 {
+  margin: 8px 0 6px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.students-summary p {
+  margin: 0;
+  color: #7f879d;
+  font-size: 13px;
+}
+
+/* ================================
+   STAT CARDS
+================================ */
+
+.students-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.student-stat-card {
+  background: #0d1222;
+  border: 1px solid #20263a;
+  border-radius: 11px;
+  padding: 20px;
+  min-height: 115px;
+}
+
+.student-stat-card span {
+  color: #8a92a8;
+  font-size: 12px;
+}
+
+.student-stat-card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.student-stat-card small {
+  display: block;
+  margin-top: 5px;
+  color: #626b82;
+  font-size: 11px;
+}
+
+/* ================================
+   STUDENTS PANEL
+================================ */
+
+.students-panel {
+  background: #0d1222;
+  border: 1px solid #20263a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.students-panel-header {
+  padding: 22px 24px;
+  border-bottom: 1px solid #20263a;
+}
+
+.students-panel-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.students-panel-header p {
+  margin: 5px 0 0;
+  color: #69738b;
+  font-size: 12px;
+}
+
+/* ================================
+   FILTERS
+================================ */
+
+.students-filters {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 0.8fr 0.8fr;
+  gap: 10px;
+  padding: 18px 24px;
+  border-bottom: 1px solid #20263a;
+}
+
+.student-search {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  background: #090d1a;
+  border: 1px solid #252c42;
+  border-radius: 7px;
+}
+
+.student-search span {
+  color: #727b91;
+  font-size: 19px;
+}
+
+.student-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.student-search input::placeholder {
+  color: #5f687e;
+}
+
+.students-filters select {
+  height: 40px;
+  padding: 0 11px;
+  background: #090d1a;
+  border: 1px solid #252c42;
+  border-radius: 7px;
+  color: #9da5b8;
+  font-size: 12px;
+  outline: none;
+}
+
+.students-filters select:focus {
+  border-color: #7048ff;
+}
+
+/* ================================
+   TABLE
+================================ */
+
+.students-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.students-table th {
+  padding: 14px 20px;
+  text-align: left;
+  background: #0a0e1b;
+  border-bottom: 1px solid #20263a;
+  color: #727b91;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+}
+
+.students-table td {
+  border-bottom: 1px solid #181e30;
+  color: #b8bfd0;
+  font-size: 12px;
+}
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.students-empty {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.students-empty-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: #151a2d;
+  border: 1px solid #282f47;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8060ff;
+  font-size: 23px;
+  margin-bottom: 14px;
+}
+
+.students-empty h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #d7dbe6;
+}
+
+.students-empty p {
+  max-width: 360px;
+  margin: 7px 0 0;
+  color: #626b82;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+
+  .students-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .students-filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .student-search {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .staff-students-page {
+    padding: 0 18px 30px;
+  }
+
+  .staff-students-topbar {
+    height: auto;
+    padding: 20px 0;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .staff-students-user {
+    display: none;
+  }
+
+  .students-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .students-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .student-search {
+    grid-column: span 1;
+  }
+
+  .students-summary {
+    padding: 20px;
+  }
+}

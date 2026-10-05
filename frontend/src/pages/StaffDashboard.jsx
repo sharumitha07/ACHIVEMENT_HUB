@@ -7,200 +7,342 @@ function StaffDashboard() {
   return (
     <div className="staff-dashboard-page">
 
-      {/* Header */}
-      <header className="staff-dashboard-header">
-        <div className="staff-dashboard-brand">
-          <img
-            src="/src/assets/rec-symbol.png"
-            alt="REC"
-            className="staff-dashboard-logo"
-          />
-          <span>ACHIEVEMENT HUB</span>
+      {/* Top Bar */}
+      <header className="staff-topbar">
+        <div className="staff-heading">
+          <h1>Staff Dashboard</h1>
+          <p>College achievement overview and insights.</p>
         </div>
 
-        <div className="staff-dashboard-user">
-          <span className="staff-user-name">Staff Name</span>
+        <div className="staff-user">
+          <div className="staff-avatar">S</div>
+
+          <div className="staff-user-info">
+            <span>Staff Name</span>
+            <small>Staff</small>
+          </div>
 
           <button
-            className="staff-logout-button"
-            onClick={() => navigate('/')}
+            className="staff-profile-button"
+            onClick={() => navigate('/staff/profile')}
           >
-            Logout
+            Profile
           </button>
         </div>
       </header>
 
-      {/* Main Content */}
+
       <main className="staff-dashboard-content">
 
-        {/* Page Heading */}
-        <div className="staff-dashboard-title">
+        {/* Overview Header */}
+        <section className="staff-overview">
           <div>
-            <h1>Staff Dashboard</h1>
+            <span className="staff-year">
+              2026–27 ACADEMIC YEAR
+            </span>
+
+            <h2>College Achievement Overview</h2>
+
             <p>
-              Monitor and explore student achievements across the college.
+              Monitor student achievements, recognitions and
+              participation across the college.
             </p>
           </div>
-        </div>
+        </section>
 
-        {/* Main Statistics */}
-        <section className="staff-stats-grid">
 
-          <div className="staff-stat-box">
-            <span>Total Students</span>
-            <strong>0</strong>
+        {/* Statistics */}
+        <section className="staff-stats">
+
+          <div className="staff-stat-card">
+            <div className="staff-stat-header">
+              <span>Total Students</span>
+              <div className="staff-stat-icon">♙</div>
+            </div>
+
+            <h3>0</h3>
+
+            <p>Registered students</p>
           </div>
 
-          <div className="staff-stat-box">
-            <span>Total Achievements</span>
-            <strong>0</strong>
+
+          <div className="staff-stat-card">
+            <div className="staff-stat-header">
+              <span>Total Achievements</span>
+              <div className="staff-stat-icon">◆</div>
+            </div>
+
+            <h3>0</h3>
+
+            <p>Recorded achievements</p>
           </div>
 
-          <div className="staff-stat-box">
-            <span>Total Wins</span>
-            <strong>0</strong>
+
+          <div className="staff-stat-card">
+            <div className="staff-stat-header">
+              <span>Total Wins</span>
+              <div className="staff-stat-icon">★</div>
+            </div>
+
+            <h3>0</h3>
+
+            <p>1st, 2nd & 3rd positions</p>
           </div>
 
-          <div className="staff-stat-box">
-            <span>Special Awards</span>
-            <strong>0</strong>
-          </div>
 
-          <div className="staff-stat-box">
-            <span>Participation</span>
-            <strong>0</strong>
+          <div className="staff-stat-card">
+            <div className="staff-stat-header">
+              <span>Special Awards</span>
+              <div className="staff-stat-icon">✦</div>
+            </div>
+
+            <h3>0</h3>
+
+            <p>Special recognitions</p>
           </div>
 
         </section>
 
-        {/* Search and Filters */}
-        <section className="staff-filter-section">
 
-          <div className="staff-section-heading">
-            <div>
-              <h2>Student Achievements</h2>
-              <p>Search and filter achievement records.</p>
+        {/* Main Analytics */}
+        <section className="staff-main-grid">
+
+          {/* Achievement Trends */}
+          <div className="staff-panel staff-trend-panel">
+
+            <div className="staff-panel-header">
+              <div>
+                <h3>Achievement Trends</h3>
+
+                <p>
+                  Achievement activity during the academic year.
+                </p>
+              </div>
+
+              <select defaultValue="year">
+                <option value="year">This Year</option>
+                <option value="all">All Years</option>
+              </select>
             </div>
+
+
+            <div className="staff-chart">
+
+              <div className="staff-chart-y">
+                <span>50</span>
+                <span>40</span>
+                <span>30</span>
+                <span>20</span>
+                <span>10</span>
+                <span>0</span>
+              </div>
+
+
+              <div className="staff-chart-area">
+
+                <div className="staff-grid-line one"></div>
+                <div className="staff-grid-line two"></div>
+                <div className="staff-grid-line three"></div>
+                <div className="staff-grid-line four"></div>
+                <div className="staff-grid-line five"></div>
+
+                <div className="staff-chart-empty">
+                  <strong>0</strong>
+                  <span>No achievement data yet</span>
+                </div>
+
+
+                <div className="staff-chart-months">
+                  <span>Jan</span>
+                  <span>Feb</span>
+                  <span>Mar</span>
+                  <span>Apr</span>
+                  <span>May</span>
+                  <span>Jun</span>
+                  <span>Jul</span>
+                  <span>Aug</span>
+                  <span>Sep</span>
+                  <span>Oct</span>
+                  <span>Nov</span>
+                  <span>Dec</span>
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
 
-          <div className="staff-filters">
 
-            <div className="staff-search">
-              <label>Search Student</label>
-              <input
-                type="text"
-                placeholder="Search by student name or register number"
-              />
+          {/* Achievement Distribution */}
+          <div className="staff-panel staff-distribution-panel">
+
+            <div className="staff-panel-header">
+              <div>
+                <h3>Achievement Distribution</h3>
+
+                <p>
+                  Overall achievement positions.
+                </p>
+              </div>
             </div>
 
-            <div className="staff-filter">
-              <label>Department</label>
-              <select defaultValue="">
-                <option value="" disabled>
-                  All Departments
-                </option>
-                <option>Information Technology</option>
-                <option>Computer Science and Engineering</option>
-                <option>Artificial Intelligence and Data Science</option>
-                <option>Electronics and Communication Engineering</option>
-                <option>Electrical and Electronics Engineering</option>
-                <option>Mechanical Engineering</option>
-                <option>Civil Engineering</option>
-              </select>
-            </div>
 
-            <div className="staff-filter">
-              <label>Achievement</label>
-              <select defaultValue="">
-                <option value="" disabled>
-                  All Achievements
-                </option>
-                <option>1st Place</option>
-                <option>2nd Place</option>
-                <option>3rd Place</option>
-                <option>Special Award</option>
-                <option>Finalist</option>
-                <option>Participation</option>
-              </select>
-            </div>
+            <div className="staff-distribution-body">
 
-            <div className="staff-filter">
-              <label>Level</label>
-              <select defaultValue="">
-                <option value="" disabled>
-                  All Levels
-                </option>
-                <option>College</option>
-                <option>Inter-College</option>
-                <option>District</option>
-                <option>State</option>
-                <option>National</option>
-                <option>International</option>
-              </select>
+              <div className="staff-donut">
+                <div className="staff-donut-inner">
+                  <strong>0</strong>
+                  <span>Total</span>
+                </div>
+              </div>
+
+
+              <div className="staff-distribution-list">
+
+                <div>
+                  <span>
+                    <i className="staff-legend first"></i>
+                    1st Place
+                  </span>
+                  <strong>0</strong>
+                </div>
+
+                <div>
+                  <span>
+                    <i className="staff-legend second"></i>
+                    2nd Place
+                  </span>
+                  <strong>0</strong>
+                </div>
+
+                <div>
+                  <span>
+                    <i className="staff-legend third"></i>
+                    3rd Place
+                  </span>
+                  <strong>0</strong>
+                </div>
+
+                <div>
+                  <span>
+                    <i className="staff-legend special"></i>
+                    Special Award
+                  </span>
+                  <strong>0</strong>
+                </div>
+
+                <div>
+                  <span>
+                    <i className="staff-legend participation"></i>
+                    Participation
+                  </span>
+                  <strong>0</strong>
+                </div>
+
+              </div>
+
             </div>
 
           </div>
 
         </section>
 
-        {/* Achievement Table */}
-        <section className="staff-records-section">
 
-          <div className="staff-section-heading">
+        {/* Department Overview */}
+        <section className="staff-panel staff-department-panel">
+
+          <div className="staff-panel-header">
+
             <div>
-              <h2>Achievement Records</h2>
-              <p>Student achievement records will appear here.</p>
+              <h3>Department Overview</h3>
+
+              <p>
+                Achievement activity across departments.
+              </p>
             </div>
+
+            <button
+              className="staff-view-button"
+              onClick={() => navigate('/staff/analytics')}
+            >
+              View Analytics
+            </button>
+
           </div>
+
+
+          <div className="staff-department-grid">
+
+            <div className="department-card">
+              <span>Information Technology</span>
+              <strong>0</strong>
+              <small>Achievements</small>
+            </div>
+
+            <div className="department-card">
+              <span>Computer Science & Engineering</span>
+              <strong>0</strong>
+              <small>Achievements</small>
+            </div>
+
+            <div className="department-card">
+              <span>AI & Data Science</span>
+              <strong>0</strong>
+              <small>Achievements</small>
+            </div>
+
+            <div className="department-card">
+              <span>Electronics & Communication</span>
+              <strong>0</strong>
+              <small>Achievements</small>
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* Recent Achievements */}
+        <section className="staff-panel staff-recent-panel">
+
+          <div className="staff-panel-header">
+
+            <div>
+              <h3>Recent Achievements</h3>
+
+              <p>
+                Latest achievement records submitted by students.
+              </p>
+            </div>
+
+            <button
+              className="staff-view-button"
+              onClick={() => navigate('/staff/achievements')}
+            >
+              View All
+            </button>
+
+          </div>
+
 
           <div className="staff-empty-state">
 
-            <div className="staff-empty-icon">
-              +
-            </div>
+            <div className="staff-empty-icon">◆</div>
 
-            <h3>No achievement records</h3>
+            <h4>No achievements recorded yet</h4>
 
             <p>
-              Achievement records submitted by students will
-              appear here.
+              Student achievement records will appear here once
+              they are submitted.
             </p>
-
-          </div>
-
-        </section>
-
-        {/* Analytics */}
-        <section className="staff-analytics-section">
-
-          <div className="staff-section-heading">
-            <div>
-              <h2>Analytics</h2>
-              <p>Overview of achievement trends across the college.</p>
-            </div>
-          </div>
-
-          <div className="staff-analytics-grid">
-
-            <div className="staff-chart-placeholder">
-              <h3>Achievements by Department</h3>
-              <div className="chart-area">
-                No data available
-              </div>
-            </div>
-
-            <div className="staff-chart-placeholder">
-              <h3>Achievements by Category</h3>
-              <div className="chart-area">
-                No data available
-              </div>
-            </div>
 
           </div>
 
         </section>
 
       </main>
+
     </div>
   );
 }

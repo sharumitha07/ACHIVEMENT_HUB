@@ -8,29 +8,26 @@ function StudentDetails() {
   return (
     <div className="student-details-page">
 
-      {/* Header */}
-      <header className="student-details-header">
-        <div className="student-details-brand">
-          <img
-            src="/src/assets/rec-symbol.png"
-            alt="REC"
-            className="student-details-logo"
-          />
-          <span>ACHIEVEMENT HUB</span>
+      {/* Top Bar */}
+      <header className="student-details-topbar">
+
+        <div>
+          <h1>Student Details</h1>
+          <p>View student information and achievement history.</p>
         </div>
 
         <button
           className="student-details-back"
-          onClick={() => navigate('/staff/dashboard')}
+          onClick={() => navigate('/staff/students')}
         >
-          ← Staff Dashboard
+          ← Back to Students
         </button>
+
       </header>
 
-      {/* Main Content */}
       <main className="student-details-content">
 
-        {/* Student Profile Header */}
+        {/* Student Header */}
         <section className="student-details-profile">
 
           <div className="student-details-avatar">
@@ -38,9 +35,10 @@ function StudentDetails() {
           </div>
 
           <div className="student-details-name">
-            <h1>Student Name</h1>
+            <span>STUDENT PROFILE</span>
+            <h2>Student Name</h2>
             <p>student@rajalakshmi.edu.in</p>
-            <span>Student ID: {id}</span>
+            <small>Student ID: {id}</small>
           </div>
 
         </section>
@@ -49,7 +47,8 @@ function StudentDetails() {
         <section className="student-details-section">
 
           <div className="student-details-section-heading">
-            <h2>Personal Information</h2>
+            <h3>Personal Information</h3>
+            <p>Basic information registered by the student.</p>
           </div>
 
           <div className="student-info-grid">
@@ -88,11 +87,12 @@ function StudentDetails() {
 
         </section>
 
-        {/* Achievement Statistics */}
+        {/* Achievement Summary */}
         <section className="student-details-section">
 
           <div className="student-details-section-heading">
-            <h2>Achievement Summary</h2>
+            <h3>Achievement Summary</h3>
+            <p>Overview of the student's achievement activity.</p>
           </div>
 
           <div className="student-achievement-stats">
@@ -103,12 +103,17 @@ function StudentDetails() {
             </div>
 
             <div className="student-achievement-stat">
-              <span>Wins</span>
+              <span>1st Place</span>
               <strong>0</strong>
             </div>
 
             <div className="student-achievement-stat">
-              <span>Runner-up</span>
+              <span>2nd Place</span>
+              <strong>0</strong>
+            </div>
+
+            <div className="student-achievement-stat">
+              <span>3rd Place</span>
               <strong>0</strong>
             </div>
 
@@ -131,29 +136,67 @@ function StudentDetails() {
 
           <div className="student-details-section-heading">
             <div>
-              <h2>Achievement Records</h2>
-              <p>All achievements submitted by this student.</p>
+              <h3>Achievement Records</h3>
+              <p>
+                All achievements submitted by this student.
+              </p>
             </div>
+
+            <button
+              className="student-achievement-filter"
+              type="button"
+            >
+              Filter
+            </button>
           </div>
 
-          <div className="student-details-empty">
+          <div className="student-achievement-table-wrapper">
 
-            <div className="student-details-empty-icon">
-              +
-            </div>
+            <table className="student-achievement-table">
 
-            <h3>No achievement records</h3>
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Category</th>
+                  <th>Achievement</th>
+                  <th>Level</th>
+                  <th>Academic Year</th>
+                </tr>
+              </thead>
 
-            <p>
-              Achievement records submitted by this student
-              will appear here.
-            </p>
+              <tbody>
+
+                <tr>
+                  <td colSpan="5">
+
+                    <div className="student-details-empty">
+
+                      <div className="student-details-empty-icon">
+                        ◆
+                      </div>
+
+                      <h4>No achievement records</h4>
+
+                      <p>
+                        Achievement records submitted by this student
+                        will appear here once the backend is connected.
+                      </p>
+
+                    </div>
+
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
 
           </div>
 
         </section>
 
       </main>
+
     </div>
   );
 }
