@@ -32,14 +32,15 @@ function Sidebar() {
           MENU
         </p>
 
+        {/* Dashboard */}
         <NavLink
-          to="/student/progress"
+          to="/student/dashboard"
           className={({ isActive }) =>
-           `sidebar-link ${isActive ? 'active' : ''}`
-           }
+            `sidebar-link ${isActive ? 'active' : ''}`
+          }
         >
-          <span className="sidebar-icon">↗</span>
-          <span>My Progress</span>
+          <span className="sidebar-icon">▦</span>
+          <span>Dashboard</span>
         </NavLink>
 
         {/* My Achievements */}
