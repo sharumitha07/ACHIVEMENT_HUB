@@ -9,7 +9,7 @@ const login = async (req, res) => {
 try {
 const { email, password } = req.body;
 
-```
+
 if (!email || !password) {
   return res.status(400).json({
     success: false,
@@ -72,17 +72,17 @@ return res.status(200).json({
     role: user.role,
   },
 });
-```
+
 
 } catch (error) {
 console.error("Login error:", error);
 
-```
+
 return res.status(500).json({
   success: false,
   message: "Server error during login",
 });
-```
+
 
 }
 };
@@ -92,7 +92,7 @@ const googleLogin = async (req, res) => {
 try {
 const { credential } = req.body;
 
-```
+
 if (!credential) {
   return res.status(400).json({
     success: false,
@@ -171,17 +171,17 @@ return res.status(200).json({
     role: user.role,
   },
 });
-```
+
 
 } catch (error) {
 console.error("Google login error:", error.message);
 
-```
+
 return res.status(401).json({
   success: false,
   message: "Google Sign-In failed. Please try again.",
 });
-```
+
 
 }
 };
@@ -195,7 +195,7 @@ const [users] = await db.execute(
 [req.user.user_id]
 );
 
-```
+
 if (users.length === 0) {
   return res.status(404).json({
     success: false,
@@ -211,17 +211,16 @@ return res.status(200).json({
     role: users[0].role,
   },
 });
-```
+
 
 } catch (error) {
 console.error("Get current user error:", error);
 
-```
 return res.status(500).json({
   success: false,
   message: "Server error",
 });
-```
+
 
 }
 };

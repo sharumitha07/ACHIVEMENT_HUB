@@ -16,7 +16,6 @@ const [loading, setLoading] = useState(false);
 const redirectByRole = (user) => {
 const role = user?.role?.toUpperCase();
 
-```
 if (!['STUDENT', 'STAFF'].includes(role)) {
   throw new Error('Unable to verify your account role.');
 }
@@ -31,9 +30,9 @@ if (!data.token || !data.user) {
 throw new Error('Unable to verify your account.');
 }
 
-```
 localStorage.setItem('token', data.token);
 localStorage.setItem('user', JSON.stringify(data.user));
+
 redirectByRole(data.user);
 ```
 
@@ -44,7 +43,7 @@ event.preventDefault();
 setError('');
 setLoading(true);
 
-```
+
 try {
   const data = await loginUser(email.trim(), password);
   saveLogin(data);
@@ -53,7 +52,7 @@ try {
 } finally {
   setLoading(false);
 }
-```
+
 
 };
 
@@ -61,11 +60,13 @@ const handleGoogleSuccess = async (credentialResponse) => {
 setError('');
 setLoading(true);
 
-```
+
 try {
   const response = await fetch('http://localhost:5000/api/auth/google', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+    },
     body: JSON.stringify({
       credential: credentialResponse.credential,
     }),
@@ -83,7 +84,7 @@ try {
 } finally {
   setLoading(false);
 }
-```
+
 
 };
 
@@ -97,8 +98,9 @@ style={{ backgroundImage: `url(${campusBg})` }}
          className="signin-logo"
        />
 
-```
+
       <div className="signin-label">ACHIEVEMENT HUB</div>
+
       <h1>Sign In</h1>
 
       <form onSubmit={handleSubmit} className="signin-form">
@@ -148,7 +150,9 @@ style={{ backgroundImage: `url(${campusBg})` }}
       <div className="google-signin-option">
         <GoogleLogin
           onSuccess={handleGoogleSuccess}
-          onError={() => setError('Google Sign-In failed. Please try again.')}
+          onError={() =>
+            setError('Google Sign-In failed. Please try again.')
+          }
           text="signin_with"
           shape="rectangular"
           theme="outline"
@@ -158,7 +162,7 @@ style={{ backgroundImage: `url(${campusBg})` }}
     </div>
   </div>
 </div>
-```
+
 
 );
 }

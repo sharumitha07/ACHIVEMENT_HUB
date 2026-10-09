@@ -1,3 +1,5 @@
+
+/* Login Page */
 .login-page {
   min-height: 100vh;
   width: 100%;
@@ -29,29 +31,25 @@
   align-items: center;
   justify-content: center;
   padding: 30px;
+  box-sizing: border-box;
 }
 
 /* Login Card */
-
 .login-card {
   width: min(830px, 90%);
   min-height: 500px;
   padding: 48px 60px;
-
   border: 2px solid #8a00b8;
-
   background: rgba(10, 10, 10, 0.78);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   text-align: center;
+  box-sizing: border-box;
 }
 
 /* REC Logo */
-
 .login-logo {
   width: 190px;
   height: auto;
@@ -60,66 +58,48 @@
 }
 
 /* Achievement Hub Label */
-
 .login-label {
   background: #570078;
   color: #ffffff;
-
   padding: 8px 20px;
   border-radius: 4px;
-
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.3px;
-
   margin-bottom: 26px;
 }
 
 /* Main Heading */
-
 .login-card h1 {
   color: #ffffff;
-
   font-size: clamp(38px, 5vw, 58px);
   line-height: 1.05;
   font-weight: 700;
   letter-spacing: -1.5px;
-
   margin: 0 0 25px;
 }
 
 /* Description */
-
 .login-card p {
   color: #c8c8c8;
-
   font-size: 20px;
   line-height: 1.5;
-
   max-width: 650px;
-
   margin: 0 0 30px;
 }
 
 /* Login Button */
-
 .login-button {
   border: none;
-
   background: #9500d0;
   color: #ffffff;
-
   padding: 16px 34px;
   min-width: 310px;
-
   border-radius: 4px;
-
   font-size: 18px;
   font-weight: 600;
-
   cursor: pointer;
-
-  transition: 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .login-button:hover {
@@ -131,39 +111,7 @@
   transform: translateY(0);
 }
 
-/* Mobile */
-
-@media (max-width: 600px) {
-
-  .login-overlay {
-    padding: 20px;
-  }
-
-  .login-card {
-    width: 100%;
-    min-height: 520px;
-    padding: 40px 24px;
-  }
-
-  .login-logo {
-    width: 155px;
-  }
-
-  .login-card h1 {
-    font-size: 38px;
-  }
-
-  .login-card p {
-    font-size: 16px;
-  }
-
-  .login-button {
-    width: 100%;
-    min-width: 0;
-  }
-}
-
-/* Sign-in page */
+/* Sign-In Page */
 .signin-page {
   min-height: 100vh;
   width: 100%;
@@ -177,6 +125,7 @@
   background-repeat: no-repeat;
   font-family: Arial, sans-serif;
   color: #f5f5fa;
+  box-sizing: border-box;
 }
 
 .signin-overlay {
@@ -187,8 +136,10 @@
   justify-content: center;
   padding: 32px 16px;
   background: rgba(5, 5, 15, 0.76);
+  box-sizing: border-box;
 }
 
+/* Sign-In Card */
 .signin-card {
   width: 100%;
   max-width: 510px;
@@ -197,8 +148,10 @@
   border: 1px solid rgba(160, 120, 255, 0.25);
   border-radius: 18px;
   box-shadow: 0 20px 65px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
 }
 
+/* REC Logo */
 .signin-logo {
   display: block;
   width: 150px;
@@ -208,6 +161,7 @@
   margin: 0 auto 24px;
 }
 
+/* Achievement Hub Label */
 .signin-label {
   color: #b69aff;
   text-align: center;
@@ -217,6 +171,7 @@
   margin-bottom: 12px;
 }
 
+/* Sign-In Heading */
 .signin-card h1 {
   margin: 0 0 34px;
   text-align: center;
@@ -226,24 +181,37 @@
   letter-spacing: -0.8px;
 }
 
+/* Sign-In Form */
 .signin-form {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: 25px;
 }
 
+/* Form Fields */
 .signin-field {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: 10px;
+  text-align: left;
+  box-sizing: border-box;
 }
 
+/* Left-aligned labels */
 .signin-field label {
+  display: block;
+  width: 100%;
   color: #e3e0ee;
   font-size: 14px;
   font-weight: 600;
+  text-align: left;
 }
 
+/* Input Fields */
 .signin-field input {
   display: block;
   width: 100%;
@@ -269,6 +237,7 @@
   box-shadow: 0 0 0 3px rgba(161, 132, 255, 0.16);
 }
 
+/* Sign-In Button */
 .signin-button {
   width: 100%;
   min-height: 54px;
@@ -280,37 +249,100 @@
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+  box-sizing: border-box;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .signin-button:hover:not(:disabled) {
-  background: #9b75ff;
+  background: #9b72ff;
   transform: translateY(-1px);
 }
 
 .signin-button:disabled {
-  opacity: 0.7;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
-.signin-error {
-  margin: -8px 0 0;
-  color: #ff929b;
-  font-size: 14px;
-  line-height: 1.5;
+/* OR Divider */
+.signin-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  margin: 26px 0;
+  color: #aaa5bd;
+  font-size: 13px;
+  text-align: center;
 }
 
+.signin-divider::before,
+.signin-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #39364e;
+}
+
+
+.google-signin-option {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.google-signin-option > div {
+  max-width: 100%;
+}
+
+
+.signin-error {
+  color: #ff8b9c;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 14px;
+}
+
+/* Responsive Design */
 @media (max-width: 520px) {
+  .login-overlay {
+    padding: 20px;
+  }
+
+  .login-card {
+    width: 100%;
+    padding: 35px 20px;
+  }
+
+  .login-logo {
+    width: 150px;
+  }
+
+  .login-card p {
+    font-size: 16px;
+  }
+
+  .login-button {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .signin-page {
+    padding: 20px 12px;
+  }
+
+  .signin-overlay {
+    padding: 20px 8px;
+  }
+
   .signin-card {
     padding: 32px 22px;
   }
 
   .signin-card h1 {
     font-size: 30px;
-    margin-bottom: 28px;
-  }
-
-  .signin-logo {
-    width: 125px;
   }
 }
+

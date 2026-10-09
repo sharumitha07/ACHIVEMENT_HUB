@@ -14,8 +14,6 @@ style={{ backgroundImage: `url(${campusBg})` }}
          alt="Rajalakshmi Engineering College"
          className="login-logo"
        />
-
-```
       <div className="login-label">ACHIEVEMENT HUB</div>
 
       <h1>
@@ -38,7 +36,7 @@ style={{ backgroundImage: `url(${campusBg})` }}
     </div>
   </div>
 </div>
-```
+
 
 );
 }
