@@ -49,7 +49,7 @@ function StudentDashboard() {
             </span>
 
             <h2>
-              Good afternoon, <span>Student Name</span>
+              Hello, <span>Student Name</span>
             </h2>
 
             <p>
