@@ -1,8 +1,10 @@
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import Login from '../pages/Login';
 import SignIn from '../pages/SignIn';
+import SignUp from '../pages/SignUp';
 
 /* Student */
 import StudentLayout from '../layouts/StudentLayout';
@@ -24,112 +26,43 @@ import StaffAnalytics from '../pages/StaffAnalytics';
 function AppRoutes() {
   return (
     <BrowserRouter>
-
       <Routes>
-
-        {/* =================================
-            LOGIN
-        ================================= */}
-
-        <Route
-          path="/"
-          element={<Login />}
-        />
-
+        {/* Login and Registration */}
+        <Route path="/" element={<Login />} />
         <Route path="/signin" element={<SignIn />} />
-        {/* =================================
-            STUDENT PROFILE SETUP
-        ================================= */}
+        <Route path="/signup" element={<SignUp />} />
 
+        {/* Student Profile Setup */}
         <Route
           path="/student/profile-setup"
           element={<StudentProfileSetup />}
         />
 
-
-        {/* =================================
-            STUDENT PAGES
-            All student pages use StudentLayout
-        ================================= */}
-
+        {/* Student Pages */}
         <Route
           path="/student"
           element={<StudentLayout />}
         >
-
-          <Route
-            path="dashboard"
-            element={<StudentDashboard />}
-          />
-
-          <Route
-            path="achievements"
-            element={<MyAchievements />}
-          />
-
-          <Route
-            path="add-achievement"
-            element={<AddAchievement />}
-          />
-
-          <Route
-            path="progress"
-            element={<MyProgress />}
-          />
-
-          <Route
-            path="profile"
-            element={<StudentProfile />}
-          />
-
-          <Route
-            path="feed"
-            element={<Home />}
-          />
-
+          <Route path="dashboard" element={<StudentDashboard />} />
+          <Route path="achievements" element={<MyAchievements />} />
+          <Route path="add-achievement" element={<AddAchievement />} />
+          <Route path="progress" element={<MyProgress />} />
+          <Route path="profile" element={<StudentProfile />} />
+          <Route path="feed" element={<Home />} />
         </Route>
 
-
-        {/* =================================
-            STAFF PAGES
-            All staff pages use StaffLayout
-        ================================= */}
-
+        {/* Staff Pages */}
         <Route
           path="/staff"
           element={<StaffLayout />}
         >
-
-          <Route
-            path="dashboard"
-            element={<StaffDashboard />}
-          />
-
-          <Route
-            path="students"
-            element={<Students />}
-          />
-
-          <Route
-            path="student/:id"
-            element={<StudentDetails />}
-          />
-
-          <Route
-            path="achievements"
-            element={<StaffAchievements />}
-          />
-
-          <Route
-            path="analytics"
-            element={<StaffAnalytics />}
-          />
-
+          <Route path="dashboard" element={<StaffDashboard />} />
+          <Route path="students" element={<Students />} />
+          <Route path="student/:id" element={<StudentDetails />} />
+          <Route path="achievements" element={<StaffAchievements />} />
+          <Route path="analytics" element={<StaffAnalytics />} />
         </Route>
-
-
       </Routes>
-
     </BrowserRouter>
   );
 }
